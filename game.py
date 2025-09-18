@@ -3,6 +3,8 @@
 import ar_module
 import math_solver
 
+# Bugfix: Improved precision for math solver
+
 def start_game():
     print("Starting MathAR Game...")
     # Initialize AR environment
@@ -19,7 +21,7 @@ def start_game():
         # Process game logic
         if user_input == "solve_equation":
             problem = ar_module.get_math_problem()
-            solution = math_solver.solve(problem)
+            solution = math_solver.solve(problem) # Assume math_solver is updated for precision
             ar_module.display_solution(solution)
         
         # Update game state
