@@ -3,6 +3,9 @@
 import ar_module
 import math_solver
 
+# New module for interactive geometry puzzles
+import geometry_puzzles_module
+
 def start_game():
     print("Starting MathAR Game...")
     # Initialize AR environment
@@ -21,6 +24,8 @@ def start_game():
             problem = ar_module.get_math_problem()
             solution = math_solver.solve(problem)
             ar_module.display_solution(solution)
+        elif user_input == "start_geometry_puzzle":
+            geometry_puzzles_module.start_puzzle()
         
         # Update game state
         
